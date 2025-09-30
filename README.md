@@ -10,7 +10,7 @@
 
 <body> style= background-color #ffac54ff
 <img scr="images/Screenshot 2025-09-29 at 12.43.32 PM.png" alt="window1">
-<img scr="https://blob.gifcities.org/gifcities/IH2UIRW2GN5QNTCKU6IZHLUCEEXYJGNQ.gif" alt="building"
+<img scr="IH2UIRW2GN5QNTCKU6IZHLUCEEXYJGNQ.gif" alt="building"
 
 </body>
 
