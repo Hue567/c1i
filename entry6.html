@@ -5,22 +5,28 @@
 <head>
     <style>
         body {
-            background-image: url("https://t4.ftcdn.net/jpg/01/77/05/55/360_F_177055535_dERDPN87Mcqog10CoUPJINL5LArOve6O.jpg");
+            background-image: url("https://img.freepik.com/free-photo/weathered-brick-wall-texture_1154-734.jpg?semt=ais_hybrid&w=740&q=80");
             background-size: cover;
         }
 
-        img.small-left {
-            width: 200px;
-            height: auto;
-            float: left;
-            margin-right: 15px;
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
         }
     </style>
     </style>
 </head>
 
 <body>
-    <img class="fit-picture" src="pho viet.jpg" alt="pho" />
+    <div class="grid">
+        <img class="fit-picture" src="pho viet.jpg" alt="pho" />
+    </div>
     <H1>Food Places</H1>
     <h2>
         Pho Viet Nam
