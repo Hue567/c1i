@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <title> Flexbox </title>
+
 <head>
-    <style>
-      body { background-image: url("https://images.pexels.com/photos/597909/pexels-photo-597909.jpeg?_gl=1*14rf29n*_ga*MTEwMjQzMjMwOS4xNzU5NzY3OTIw*_ga_8JE65Q40S6*czE3NTk3Njc5MjAkbzEkZzEkdDE3NTk3Njc5MjIkajU4JGwwJGgw");
-    background-size: cover;}
-  .container {
-    display: flex;
-    
-    gap: 10px;
-    gap: 10px; 
-  }
-  .box {
+  <style>
+    body {
+      background-image: url("https://images.pexels.com/photos/597909/pexels-photo-597909.jpeg?_gl=1*14rf29n*_ga*MTEwMjQzMjMwOS4xNzU5NzY3OTIw*_ga_8JE65Q40S6*czE3NTk3Njc5MjAkbzEkZzEkdDE3NTk3Njc5MjIkajU4JGwwJGgw");
+      background-size: cover;
+    }
+
+    .container {
+      display: flex;
+
+      gap: 10px;
+      gap: 10px;
+    }
+
+    .box {
       flex: 1;
       background-color: #05305daf;
       color: white;
@@ -19,32 +24,38 @@
       border-radius: 10px;
       text-align: center;
       font-size: 18px;
-  }
-  .parent {
-  display: flex;
-  height: 300px;
-  text-align: center;
+    }
+
+    .parent {
+      display: flex;
+      height: 300px;
+      text-align: center;
       color: white;
       font-size: 18px;
       border-radius: 8px;
-  }
-  .child {
-  width: 100px;
-  height: 100px;
-  margin: auto;
-}
-.navigation {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-}
- .item {
-  flex-grow: 4; /* default 0 */
-}
-h1 {
-  text-align: center;
-}
-</style>
+    }
+
+    .child {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+    }
+
+    .navigation {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+    }
+
+    .item {
+      flex-grow: 4;
+      /* default 0 */
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
