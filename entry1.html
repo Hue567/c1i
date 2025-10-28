@@ -4,8 +4,120 @@
 <head>
     <style>
         body {
-            background-image: url("https://i.pinimg.com/1200x/cc/27/cd/cc27cd9b84d75355074b8c81c558bd42.jpg");
-            background-size: cover;
+            font-family: "Georgia", "Times New Roman", serif;
+            background-color: #f8f5f0;
+            color: #222;
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px double #222;
+            margin-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        .date-line {
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        article {
+            column-count: 2;
+            column-gap: 2rem;
+            text-align: justify;
+        }
+
+        article h2 {
+            column-span: all;
+            border-bottom: 1px solid #222;
+            padding-bottom: 0.3rem;
+            margin-top: 0;
+        }
+
+        aside {
+            border-left: 1px solid #bbb;
+            padding-left: 1rem;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+            border-top: 2px solid #222;
+            padding-top: 0.5rem;
         }
     </style>
 </head>
+
+<body>
+    <header>
+        <h1>The Worst Morning Commute</h1>
+        <div class="date-line">Tuesday, October 28, 2025</div>
+    </header>
+
+    <main>
+        <article>
+            <h2> NJ Transit </h2>
+            <p>Before I moved to Brooklyn I was commuting from central Jersey. For a 9 am class I would wake up at
+                promptly at 6 am. This gave
+                me one hour to get dressed, make breakfast, and pack a lunch. At around 7:00 I was out the door to make
+                my train at 7:06. My dad
+                drove me to our towns station. After he dropped me off I rushed to the tracks and hopped on. Once
+                settled the conductor came to scan tickets
+                Some mornings I needed to take a trasfer Train. That was today and as I waited in the cold at my
+                transfer station thirty minutes rolled by.
+                An announcement alerted the few commuters on the track that there would be no train and to wait for the
+                next Hoboken bound.
+                As I sit on a bench knowing I would be late, the next train rolls by. In confusion I assumed this was
+                different train that was on schedule.
+                Not mine. As the conductor closes the doors I realize it is my train. Which I had missed and I was to
+                wait for the next one.
+                Finally I get on my transfer train and reach my destination. At hoboken I rush towards the path trains
+                for mahattan. There is yet a fifteen minute waite
+                and I sit down. Once the path arrives I board and reach 14th street. I take a brisk walk to class two
+                blocks away.
+            </p>
+            <p>Q Line</p>
+            <p>After my move to Brooklyn I wake up 7 am for class. I take an hour to get ready then walk to my station a
+                few blocks away.
+                My Manhattan bound Q train arrives in the following seven minutes and board. The commute takes me to a
+                sunrise view over the bridge
+                and a stop motion show at barklay center. After thirty-five minutes I arrive at Union Square. From there
+                I take a swift walk to
+                class two blocks away.
+            </p>
+        </article>
+
+        <aside>
+            <h3>Related News</h3>
+            <ul>
+                <li>Q Line Stops Running Suddenly</li>
+                <li>Class Is Cancelled While On The Train</li>
+                <li>You've Forgotten Something At Home</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        © 2025 The Daily Times — All Rights Reserved
+    </footer>
+</body>
+
+</html>
