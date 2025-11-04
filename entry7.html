@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background: rgb(0, 0, 0);
+            color: rgb(255, 241, 205);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #treatBtn {
+            background: orange;
+            color: white;
+            font-size: 24px;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .candy {
+            position: absolute;
+            top: -50px;
+            font-size: 24px;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="treatBtn">Trick or Treat!</button>
+
+    <script>
+        const button = document.getElementById("treatBtn");
+        const candies = ["🍬", "🍭", "🍫"];
+
+        button.addEventListener("click", () => {
+            for (let i = 0; i < 30; i++) {
+                createCandy();
+            }
+        });
+        function createCandy() {
+            const candy = document.createElement("div");
+            candy.classList.add("candy");
+            candy.textContent = candies[Math.floor(Math.random() * candies.length)];
+        }
+    </script>
+</body>
+
+</html>
