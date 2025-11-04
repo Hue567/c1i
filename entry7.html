@@ -19,14 +19,14 @@
             font-size: 24px;
             border: none;
             padding: 20px 40px;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
         }
 
         .candy {
             position: absolute;
             top: -50px;
-            font-size: 24px;
+            font-size: 20px;
             pointer-events: none;
             animation: fall linear forwards;
         }
@@ -50,17 +50,29 @@
 
     <script>
         const button = document.getElementById("treatBtn");
-        const candies = ["🍬", "🍭", "🍫"];
+        const candies = ["🍬", "🍭", "🍫",];
 
         button.addEventListener("click", () => {
             for (let i = 0; i < 30; i++) {
                 createCandy();
             }
         });
+
         function createCandy() {
             const candy = document.createElement("div");
             candy.classList.add("candy");
             candy.textContent = candies[Math.floor(Math.random() * candies.length)];
+
+
+            candy.style.left = Math.random() * window.innerWidth + "px";
+
+            candy.style.fontSize = Math.random() * 20 + 20 + "px";
+
+            candy.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+            document.body.appendChild(candy);
+
+            candy.addEventListener("animationend", () => candy.remove());
         }
     </script>
 </body>
