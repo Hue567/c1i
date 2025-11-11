@@ -26,15 +26,36 @@
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
+        .photo img:hover {
+            transform: scale(1.05);
+        }
+
+        .click-count {
+            margin-top: 10px;
+            font-family: sans-serif;
+            font-size: 18px;
+            color: #333;
+        }
     </style>
 </head>
 
 <body>
+    <h1>Vote For Your Mayor</h1>
     <div class="photo-container">
-        <img src="Zohran_Mamdani_05.25.25_(b)_(cropped).jpg.webp" alt="Photo 1">
-        <img src="cuomo-questions--gpkv-articleLarge.webp" alt="Photo 2">
-        <img src="sliwa-questions-01-hckv-articleLarge.webp" alt="Photo 3">
+        <div class="photo">
+            <img src="Zohran_Mamdani_05.25.25_(b)_(cropped).jpg.webp" alt="Photo 1">
+            <img src="cuomo-questions--gpkv-articleLarge.webp" alt="Photo 2">
+            <img src="sliwa-questions-01-hckv-articleLarge.webp" alt="Photo 3">
+        </div>
     </div>
+    <script>
+        let counts = [0, 0, 0];
+        function countClicks(index) {
+            counts[index - 1]++;
+            document.getElementById("count" + index).textContent = "Clicks: " + counts[index - 1];
+        }
+    </script>
 </body>
 
 </html>
