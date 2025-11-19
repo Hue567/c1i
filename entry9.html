@@ -10,11 +10,12 @@
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
-            height: 100vh;
+            padding-top: 40px;
             background: #f4f4f4;
         }
 
@@ -67,7 +68,7 @@
         Come inside my Brooklyn appartment!
     </h1>
 
-    <img id="main-image" src="door.jpg" alt="Main Image">
+    <img id="main-image" src="door2.png" alt="Main Image">
 
     <div id="carousel-container">
         <span id="prev" class="arrow">&#10094;</span>
@@ -78,7 +79,6 @@
     <script>
         const images = [
             "Laz and Manny.JPEG",
-            "me and leander.png",
             "riana me laz.JPEG",
             "guys on roof.jpeg"
         ];
