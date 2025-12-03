@@ -19,6 +19,19 @@
         .draggable:active {
             cursor: grabbing;
         }
+
+        .instruction-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 12px 18px;
+            font-size: 16px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 
@@ -27,6 +40,9 @@
     <img src="pho viet.jpg" alt="" class="draggable" style="top: 50px; left: 50px;">
     <img src="mango mango.jpg" alt="" class="draggable" style="top: 50px; left: 50px;">
     <img src="food poster.jpg" alt="" class="draggable" style="top: 50px; left: 50px;">
+    <div class="instruction-box">
+        Click and drag to arrange posters!
+    </div>
     <script>
         let activeImg = null;
         let offsetX = 0;
