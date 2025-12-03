@@ -9,56 +9,50 @@
             background-size: cover;
         }
 
-        img {
-            max-width: 50%;
+        .draggable {
+            position: absolute;
+            cursor: grab;
+            user-select: none;
+            width: 200px;
             border-radius: 15px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .box {
-            flex: 1;
-            background-color: #ffffffaf;
-            color: rgb(0, 0, 0);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 18px;
+        .draggable:active {
+            cursor: grabbing;
         }
-
-        .photo-collage {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .photo-collage .left-column,
-        .photo-collage .right-column {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .photo-collage img {
-            width: 100%;
-            border-radius: 4px;
-            object-fit: cover;
-        }
-    </style>
     </style>
 </head>
 
 <body>
 
-    <section class="photo-collage">
-        <div class="left-column">
-            <img src="pho viet.jpg" alt="" width="200">
-            <img src="mango mango.jpg" alt="" width="200">
+    <img src="pho viet.jpg" alt="" class="draggable" style="top: 50px; left: 50px;">
+    <img src="mango mango.jpg" alt="" class="draggable" style="top: 50px; left: 50px;">
+    <img src="food poster.jpg" alt="" class="draggable" style="top: 50px; left: 50px;">
+    <script>
+        let activeImg = null;
+        let offsetX = 0;
+        let offsetY = 0;
 
-        </div>
-        <div class="right-column">
-            <img src="food poster.jpg" alt="" width="200">
-        </div>
-    </section>
+        document.querySelectorAll('.draggable').forEach(img => {
+            img.addEventListener('mousedown', (e) => {
+                activeImg = img;
+                offsetX = e.clientX - img.offsetLeft;
+                offsetY = e.clientY - img.offsetTop;
+            });
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (activeImg) {
+                activeImg.style.left = (e.clientX - offsetX) + 'px';
+                activeImg.style.top = (e.clientY - offsetY) + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            activeImg = null;
+        });
+    </script>
+
 
 
 </body>
